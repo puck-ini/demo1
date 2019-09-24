@@ -49,11 +49,17 @@ public class MsgController {
         if (msg == null){
             //throw new
         }
-        if (title != null || title.isEmpty()){
-            msg.setTitle(title);
+        if (title != null ){
+            if (!title.isEmpty()){
+                msg.setTitle(title);
+            }
+
         }
-        if (content != null || content.isEmpty()){
-            msg.setContent(content);
+        if (content != null ){
+            if ( !content.isEmpty()){
+                msg.setContent(content);
+            }
+
         }
         if (img != null){
             msg.setImg("123");
