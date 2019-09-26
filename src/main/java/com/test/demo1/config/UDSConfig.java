@@ -23,8 +23,11 @@ public class UDSConfig implements UserDetailsService {
         testUser.setUsername(username);
         testUser.setPassword(passwordEncoder.encode("123465"));
         System.out.println(testUser.getPassword());
+        //System.out.println(AuthorityUtils.commaSeparatedStringToAuthorityList("admin").getClass());
         return new User(username,testUser.getPassword(),testUser.isEnabled(),
                 testUser.isAccountNonExpired(),testUser.isCredentialsNonExpired(),
                 testUser.isAccountNonLocked(), AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+
+
     }
 }
